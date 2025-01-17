@@ -1,1 +1,5 @@
 BASE_URL = "https://qa-scooter.praktikum-services.ru"
+COURIER_LOGIN = "/api/v1/courier/login"
+COURIER_CREATE = "/api/v1/courier"
+ORDERS_LIST = "/api/v1/orders"
+ORDERS_CREATE = "/api/v1/orders"
