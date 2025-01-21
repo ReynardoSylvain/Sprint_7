@@ -3,15 +3,12 @@ import pytest
 from data.api_client import ApiClient
 from data.utils import generate_random_string
 from data.urls import BASE_URL, COURIER_CREATE
-from data.helper import register_new_courier
+from data.conftest import register_new_courier
+from data.conftest import api_client
 
 
 @allure.feature("Курьер")
 class TestCourierCreate:
-
-    @pytest.fixture(scope="function")
-    def api_client(self):
-        return ApiClient(BASE_URL)
 
     @allure.title("Создание курьера")
     def test_courier_create_success(self, api_client):

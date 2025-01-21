@@ -15,13 +15,14 @@
 * `api_client.py` - Класс для отправки HTTP-запросов к API.
 * `utils.py` - Вспомогательные функции для генерации случайных строк.
 * `urls.py` - Файл, содержащий базовый URL для API.
+* `conftest.py` - Файл, содержащий фикстуры.
 
 ### 📁 tests - директория с тестами
 
-*   `courier_tests.py` - Тесты для API создания курьеров.
-*   `courier_login_tests.py` - Тесты для API авторизации курьеров.
-*   `order_tests.py` - Тесты для API создания заказов.
-*   `get_orders_list_tests.py` - Тесты для API получения списка заказов.
+*   `test_create_courier.py` - Тесты для API создания курьеров.
+*   `test_courier_login.py` - Тесты для API авторизации курьеров.
+*   `test_create_order.py` - Тесты для API создания заказов.
+*   `test_get_orders_list.py` - Тесты для API получения списка заказов.
 
 ### 📁 allure-results - директория с отчетами о тестировании Allure
 

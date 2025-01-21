@@ -4,17 +4,14 @@ import pytest
 from data.api_client import ApiClient
 from data.utils import generate_random_string
 from data.urls import BASE_URL, COURIER_LOGIN
-from data.helper import register_new_courier
+from data.conftest import register_new_courier
+from data.conftest import api_client
 
 logging.basicConfig(level=logging.INFO)
 
 
 @allure.feature("Логин курьера")
 class TestCourierLogin:
-
-    @pytest.fixture(scope="function")
-    def api_client(self):
-        return ApiClient(BASE_URL)
 
     @allure.title("Успешный логин курьера")
     def test_courier_login_success(self, api_client, register_new_courier):

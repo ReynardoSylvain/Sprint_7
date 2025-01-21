@@ -2,17 +2,14 @@ import allure
 import logging
 import pytest
 from data.api_client import ApiClient
-from data.urls import BASE_URL, ORDERS_LIST
+from data.urls import ORDERS_LIST
+from data.conftest import api_client
 
 logging.basicConfig(level=logging.INFO)
 
 
 @allure.feature("Список заказов")
 class TestGetOrdersList:
-
-    @pytest.fixture(scope="function")
-    def api_client(self):
-        return ApiClient(BASE_URL)
 
     @allure.title("Получение списка заказов")
     def test_get_orders_list(self, api_client):
